@@ -1,0 +1,405 @@
+html,body {
+	margin:0;
+	padding:0;
+	height:100%;
+	background:white;
+	color:#666;
+}
+
+div#main {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+div#topBar {
+	width: 100%;
+	height: 10%;
+	min-height: 5%;
+	height: auto;
+}
+
+div#menuContainer{
+	width: auto;
+	margin: 0 auto;
+	
+}
+
+div#topBarUp{
+	width: 100%;
+	height: 60%;
+	min-height: 60%;
+	background-image: url('img/textures/concrete.jpg');
+  	background-repeat:repeat;
+   -moz-box-shadow:    inset 0 0 5px #000000;
+   -webkit-box-shadow: inset 0 0 5px #000000;
+   box-shadow:         inset 0 0 5px #000000;
+   height: auto !important;
+}
+
+div#topBarDown{
+	width: 100%;
+	height: 40%;
+	min-height: 40%;
+	background:#1E3166;
+	height: auto !important;
+}
+
+div#mainContent {
+	margin: 0 auto;
+	width: auto;
+	height: 90%;
+	height: auto !important;
+	background:white;
+	font-family:arial,sans-serif;
+	font-size:1.5rem;
+	bottom:2%;
+
+}
+
+div#bottomBar {
+	position:relative;
+	width: 100%;
+	height: 2%;
+	min-height: 1%;
+	background:#BFBFBF;
+	margin-bottom: 0px;
+	bottom:0px;
+	visibility: hidden;
+}
+
+div#logo{
+	text-align: center;
+}
+
+div#sectionTitle{
+	width: 100%;
+	height: 10%;
+	font-size: 1.5rem;
+	background-color: #D4D5D6;
+	color: white;
+}
+
+#sectionText{
+	padding: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div#sectionContent{
+	margin: 0 auto;
+	width: 80%;
+	height: 90%;
+	background-color: white;
+	padding-left: 20px;
+	padding-top: 30px;
+}
+/********************************** Form Table *****************************/
+.formTable{
+
+}
+
+.formTableTD {
+	text-align: right;
+	padding: 3px;
+}
+
+.formTableTD10 {
+	text-align: right;
+	padding: 10px;
+}
+
+.formTableTD10Left {
+	text-align: left;
+	padding: 10px;
+}
+
+.formTableTR {
+	text-align: right;
+}
+
+/*****************************************************************************/
+
+/*************** rounded inputs **********************************************/
+
+input.rounded {
+
+  border: 1px solid #ccc;
+   
+  /* Safari 5, Chrome support border-radius without vendor prefix.
+   * FF 3.0/3.5/3.6, Mobile Safari 4.0.4 require vendor prefix.
+   * No support in Safari 3/4, IE 6/7/8, Opera 10.0.
+   */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  
+  /* Chrome, FF 4.0 support box-shadow without vendor prefix.
+   * Safari 3/4/5 and FF 3.5/3.6 require vendor prefix.
+   * No support in FF 3.0, IE 6/7/8, Opera 10.0, iPhone 3.
+   * change the offsets, blur and color to suit your design.
+   */
+  -moz-box-shadow: 2px 2px 3px #666;
+  -webkit-box-shadow: 2px 2px 3px #666;
+  box-shadow: 2px 2px 3px #666;
+  
+  /* using a bigger font for demo purposes so the box isn't too small */
+  font-size: 20px;
+  
+  /* with a big radius/font there needs to be padding left and right
+   * otherwise the text is too close to the radius.
+   * on a smaller radius/font it may not be necessary
+   */
+  padding: 4px 7px;
+  
+  /* only needed for webkit browsers which show a rectangular outline;
+   * others do not do outline when radius used.
+   * android browser still displays a big outline
+   */
+  outline: 0;
+
+  /* this is needed for iOS devices otherwise a shadow/line appears at the
+   * top of the input. depending on the ratio of radius to height it will
+   * go all the way across the full width of the input and look really messy.
+   * ensure the radius is no more than half the full height of the input, 
+   * and the following is set, and everything will render well in iOS.
+   */
+  -webkit-appearance: none;
+  
+}
+
+input.rounded:focus {
+  
+  /* supported IE8+ and all other browsers tested.
+   * optional, but gives the input focues when selected.
+   * change to a color that suits your design.
+   */
+  border-color: #339933;
+  
+}
+
+/***************************/
+
+/******** controls ***************/
+
+select {
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background: #F4F4F4;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+
+input.file {
+position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0)
+}
+
+  /***********************************************/
+
+  textarea {
+	resize: none;
+}
+
+.roundedDashedBox {
+	webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border:1px dashed silver;
+	height:auto;
+	-webkit-box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.3);
+	box-shadow: 5px 5px 30px 0pxrgba(0,0,0,0.3);
+}
+
+.roundedDashedForm {
+	webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border:1px dashed silver;
+	height:100%;
+	background:#D2D4D3;
+}
+
+@media print{
+  .roundedDashedBox {
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+    box-shadow:         none; 
+  }
+}
+
+/********* Responsive table flip-scroll *****************/
+
+@media only screen and (max-width: 800px) {
+	
+	#flip-scroll .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	#flip-scroll * html .cf { zoom: 1; }
+	#flip-scroll *:first-child+html .cf { zoom: 1; }
+	
+	#flip-scroll table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+ 
+	#flip-scroll th,
+	#flip-scroll td { margin: 0; vertical-align: top; }
+	#flip-scroll th { text-align: left; }
+	
+	#flip-scroll table { display: block; position: relative; width: 100%; }
+	#flip-scroll thead { display: block; float: left; }
+	#flip-scroll tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+	#flip-scroll thead tr { display: block; }
+	#flip-scroll th { display: block; text-align: right; }
+	#flip-scroll tbody tr { display: inline-block; vertical-align: top; }
+	#flip-scroll td { display: block; min-height: 1.25em; text-align: left; }
+ 
+ 
+	/* sort out borders */
+ 
+	#flip-scroll th { border-bottom: 0; border-left: 0; }
+	#flip-scroll td { border-left: 0; border-right: 0; border-bottom: 0; }
+	#flip-scroll tbody tr { border-left: 1px solid #babcbf; }
+	#flip-scroll th:last-child,
+	#flip-scroll td:last-child { border-bottom: 1px solid #babcbf; }
+}
+/*************************************************************************/
+
+/*************************** scroll bars ********************************/
+
+.scrollstyle-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.scrollstyle-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: transparent;
+}
+
+.scrollstyle-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: transparent;
+}
+
+
+/*************************************************************************/
+
+/************************************ REPORTS ***************************/
+.reportSection 
+{
+	font-size: 1em;
+	margin-left: 1em;
+}
+
+.reportTable {
+	width:80%;
+	font-size:.9rem;
+	margin-bottom:1em;
+}
+
+.reportTable td{
+	border:1px solid #000000;
+}
+
+.reportTable td{
+	vertical-align:middle;
+	border:1px solid #98B7D9;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:7px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+
+}
+
+.reportTable tr:hover {
+	background-color: #E3BC62 !important;
+}
+
+.reportTable th{
+	vertical-align:middle;
+	border:1px solid #7EA5CF;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:5px;
+	font-size:.8rem;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+
+	background-color:#98B7D9;
+}
+
+.reportTable tr:nth-child(odd){ background-color:#eee; }
+.reportTable tr:nth-child(even){ background-color:#fff; }
+
+.dateRange td {
+	padding:.2em;
+}
+
+.reportTable td.income {
+	font-weight: bold;
+	background-color:#D7F5C9;
+}
+
+.reportTable td.outcome {
+	font-weight: bold;
+	background-color: #F5C9C9;
+}
+
+.reportTable td.total {
+	font-weight: bold;
+	background-color:#C9EBF5;
+}
+
+
+/******************************************************************************/
+
+/********************* Dashboard **********************************************/
+
+#dashboard{
+	background: url("../../../img/mainbg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 300px;
+}
+
+#homeTitle {
+	width:100%;
+	height:auto;
+	text-align: left;
+	background-color: #E6F0FF;
+	webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	font-family: Arial;
+}
+
+#homeTitle span {
+	margin-left: 20px;
+}
+
+/******************************************************************************/

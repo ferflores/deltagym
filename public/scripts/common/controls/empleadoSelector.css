@@ -1,0 +1,53 @@
+.empleadoSelectorTable {
+	width:100%;
+	font-size:.9rem;
+}
+
+.empleadoSelectorTable td{
+	border:1px solid #000000;
+}
+
+.empleadoSelectorTable td{
+	vertical-align:middle;
+	border:1px solid #98B7D9;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:7px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+	cursor: pointer;
+
+}
+
+.empleadoSelectorTable tr:hover {
+	background-color: #E3BC62 !important;
+}
+
+.empleadoSelectorTable th{
+	vertical-align:middle;
+	border:1px solid #7EA5CF;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:5px;
+	font-size:.8rem;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+
+	background-color:#98B7D9;
+}
+
+.empleadoSelectorTable tr:nth-child(odd){ background-color:#eee; }
+.empleadoSelectorTable tr:nth-child(even){ background-color:#fff; }
+
+#results {
+	margin-top: 20px;
+	max-height: 90%;
+	overflow: scroll;
+	overflow-x:hidden; 
+}
+
+#userSelector {
+	overflow: hidden;
+}

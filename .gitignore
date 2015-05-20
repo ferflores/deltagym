@@ -1,0 +1,6 @@
+/bootstrap/compiled.php
+/vendor
+/public/php/sociosImg
+composer.phar
+composer.lock
+.DS_Store

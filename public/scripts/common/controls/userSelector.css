@@ -1,0 +1,58 @@
+.userSelectorTable {
+	width:100%;
+	font-size:.9rem;
+}
+
+.userSelectorTable td{
+	border:1px solid #000000;
+}
+
+.userSelectorTable td{
+	vertical-align:middle;
+	border:1px solid #98B7D9;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:7px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+	cursor: pointer;
+
+}
+
+.userSelectorTable tr:hover {
+	background-color: #E3BC62 !important;
+}
+
+.userSelectorTable th{
+	vertical-align:middle;
+	border:1px solid #7EA5CF;
+	border-width:1px 1px 1px 1px;
+	text-align:left;
+	padding:5px;
+	font-size:.8rem;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+
+	background-color:#98B7D9;
+}
+
+.userSelectorTable tr:nth-child(odd){ background-color:#eee; }
+.userSelectorTable tr:nth-child(even){ background-color:#fff; }
+
+#results {
+	margin-top: 20px;
+	max-height: 90%;
+	overflow: scroll;
+	overflow-x:hidden; 
+}
+
+.searchInput {
+	width:150px;
+	margin-right: 5px;
+}
+
+#userSelector {
+	overflow: hidden;
+}
