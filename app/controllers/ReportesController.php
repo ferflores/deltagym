@@ -13,14 +13,16 @@ class ReportesController extends BaseController {
 		$weeksAgo = Input::get('weeksAgo');
 
 		$query = "SELECT dayofweek(date(p.fecha)) dayweek,
-					IF(pro.nombre is null, tdp.nombre, pro.nombre ) nombrepago, sum(p.monto) monto, count(*) conteo
+					CONCAT(IF(pro.nombre is null, tdp.nombre, pro.nombre ), ' - ', c.nombre) nombrepago, sum(p.monto) monto, count(*) conteo
 					FROM pagos p
 						INNER JOIN tiposdepago tdp on p.idtipodepago = tdp.id
 						LEFT JOIN promocionesaplicadas pa on pa.idpago = p.id
 						LEFT JOIN promociones pro on pro.id = pa.idpromocion
+						INNER JOIN socios s on p.idsocio = s.id
+						INNER JOIN categorias c on s.idcategoria = c.id
 					WHERE YEARWEEK(p.fecha) = YEARWEEK(CURDATE() - interval ".(7*$weeksAgo)." day)
-
-					GROUP BY nombrepago, dayweek";
+					GROUP BY nombrepago, dayweek
+					ORDER BY nombrepago";
 
 		$weekDays = array(
 			'sun' => array(), //lun

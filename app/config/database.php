@@ -65,10 +65,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'remote-mysql3.servage.net',
+			'host'      => '',
 			'database'  => 'deltagym',
 			'username'  => 'deltagym',
-			'password'  => 'd3lt4gym123',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

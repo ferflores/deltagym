@@ -7,7 +7,7 @@ class PagosController extends BaseController {
 		$costosDePago = CostoDePago::all();
 		$tiposDePago = TipoDePago::all();
 		$categorias = Categoria::all();
-		$promociones = Promocion::all();
+		$promociones = Promocion::where('activa','=', '1')->get();
 
 		return View::make('pagos.realizarpago',array('sectionText' => '- Realizar pago',
 			'costosdepago'=>$costosDePago,

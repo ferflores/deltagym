@@ -61,6 +61,8 @@ Route::any('listarSocios', array('uses'=>'BusquedasController@listarSocios'))->b
 
 Route::any('listarEmpleadosView', array('uses'=>'BusquedasController@listarEmpleadosView'))->before('auth:authorize');
 
+Route::any('listarPromosView', array('uses'=>'PromosController@index'))->before('auth:authorize');
+
 Route::any('listarEmpleados', array('uses'=>'BusquedasController@listarEmpleados'))->before('auth:authorize');
 
 Route::any('listarPagos', array('uses'=>'BusquedasController@indexListaPagos'))->before('auth:authorize');
@@ -72,6 +74,11 @@ Route::any('listarPagosEmpleados', array('uses'=>'BusquedasController@indexLista
 Route::any('listarLogEventos', array('uses'=>'BusquedasController@indexLogEventos'))->before('auth:authorize');
 
 Route::any('getPagos', array('uses'=>'BusquedasController@listarPagos'))->before('auth:authorize');
+
+Route::any('getPromos', array('uses'=>'PromosController@listarPromos'))->before('auth:authorize');
+Route::any('updatePromo', array('uses'=>'PromosController@updatePromo'))->before('auth:authorize');
+Route::any('deletePromo', array('uses'=>'PromosController@deletePromo'))->before('auth:authorize');
+Route::any('createPromo', array('uses'=>'PromosController@createPromo'))->before('auth:authorize');
 
 Route::any('getPagosServicios', array('uses'=>'BusquedasController@listarPagosServicios'))->before('auth:authorize');
 

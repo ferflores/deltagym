@@ -11,7 +11,7 @@
   <body>
   	<div id="main">
   		<div id="topBar">
-  			<div id="topBarUp"><span style="font-align:left;color:#EBECF0;padding:10px;font-family:Impact;font-size:1.9rem">DELTA GYM ADMINISTRATION</span> </div>
+  			<div id="topBarUp"><span style="font-align:left;color:#EBECF0;padding:10px;font-family:Arial;font-size:1.9rem">DELTA GYM ADMINISTRATION</span> </div>
   			<div id="topBarDown">
   				<div id="menuContainer" style="text-align:center">
 	  				<ul id="menu" style="display:inline-block">
@@ -45,7 +45,7 @@
 						</li>
 						<li class="menuTopOption"><a href="#">Configuración</a>
 								<ul>
-
+									<li class="listarpromos"><a href="listarPromosView">Promociones</a></li>
 								</ul>
 						</li>
 						<li><a href="logout">Salir</a></li>

@@ -58,39 +58,29 @@
 </div>
 <script src="{{ asset('/scripts/jquery/jquery1.10.2.js') }}"></script>
 <script src="{{ asset('/scripts/jqueryUI/js/jquery-ui-1.10.3.custom.min.js') }}"></script>
+<script src="http://momentjs.com/downloads/moment.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		var weeksAgo = <?=$weeksAgo?>;
-		var reportDate = new Date();
-		reportDate.setDate(reportDate.getDate()-(weeksAgo*7));
+		var reportDate = moment().subtract(weeksAgo*7, "day");
 
-		reportDate.setDate(reportDate.getDate() -1);
+		$("#dom").text($("#dom").text() + " " + reportDate.startOf("week").format("YYYY/MM/DD"));
 
-		$("#dom").text($("#dom").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
 
-		reportDate.setDate(reportDate.getDate() +1);
+		$("#lun").text($("#lun").text() + " " + reportDate.startOf("week").add(1,"day").format("YYYY/MM/DD"));
 
-		$("#lun").text($("#lun").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
 
-		reportDate.setDate(reportDate.getDate()+1);
+		$("#mar").text($("#mar").text() + " " + reportDate.startOf("week").add(2,"day").format("YYYY/MM/DD"));
 
-		$("#mar").text($("#mar").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
 
-		reportDate.setDate(reportDate.getDate()+1);
+		$("#mie").text($("#mie").text() + " " + reportDate.startOf("week").add(3,"day").format("YYYY/MM/DD"));
 
-		$("#mie").text($("#mie").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
+		$("#jue").text($("#jue").text() + " " + reportDate.startOf("week").add(4,"day").format("YYYY/MM/DD"));
 
-		reportDate.setDate(reportDate.getDate()+1);
+		$("#vie").text($("#vie").text() + " " + reportDate.startOf("week").add(5,"day").format("YYYY/MM/DD"));
 
-		$("#jue").text($("#jue").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
 
-		reportDate.setDate(reportDate.getDate()+1);
-
-		$("#vie").text($("#vie").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
-
-		reportDate.setDate(reportDate.getDate()+1);
-
-		$("#sab").text($("#sab").text() + " " + reportDate.getDate() + "/" + (reportDate.getMonth()+1) + "/" + reportDate.getFullYear());
+		$("#sab").text($("#sab").text() + " " + reportDate.startOf("week").add(6,"day").format("YYYY/MM/DD"));
 
 		var totalSun = 0;
 		$.each($(".sun"), function(i,e){
